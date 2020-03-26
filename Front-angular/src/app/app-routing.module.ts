@@ -1,16 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
+import { AddclientComponent } from './components/addclient/addclient.component';
+import { ListclientComponent } from './components/listclient/listclient.component';
 
 
 const routes: Routes = [
-  {
-    path : '' , 
-    component : AppComponent , 
-    children : [
-      { path: 'addproduct',loadChildren:() => import('./components/addproduct/addproduct.module').then(m => m.AddproductModule)},
-    ]
-  }
+  { path : 'addclient' , component : AddclientComponent },
+  { path : 'listclient' , component : ListclientComponent },
 ];
 
 @NgModule({

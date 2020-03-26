@@ -3,7 +3,7 @@
   "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "angular-laravel": {
+    "Front-angular": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-laravel",
+            "outputPath": "dist/Front-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-laravel:build"
+            "browserTarget": "Front-angular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-laravel:build:production"
+              "browserTarget": "Front-angular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-laravel:build"
+            "browserTarget": "Front-angular:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-laravel:serve"
+            "devServerTarget": "Front-angular:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-laravel:serve:production"
+              "devServerTarget": "Front-angular:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "angular-laravel"
+  "defaultProject": "Front-angular"
 }
