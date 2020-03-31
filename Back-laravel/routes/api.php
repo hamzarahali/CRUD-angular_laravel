@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,11 +13,11 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::get('tasks', 'TaskController@index');
-Route::get('tasks/{id}', 'TaskController@show');
-Route::post('tasks', 'TaskController@store');
-Route::put('tasks/{id}', 'TaskController@update');
-Route::delete('tasks/{id}', 'TaskController@delete');
+Route::get('tasks', 'TaskController@index')->middleware('cors');
+Route::get('tasks/{id}', 'TaskController@show')->middleware('cors');
+Route::post('tasks', 'TaskController@store')->middleware('cors');
+Route::put('tasks/{id}', 'TaskController@update')->middleware('cors');
+Route::delete('tasks/{id}', 'TaskController@delete')->middleware('cors');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
