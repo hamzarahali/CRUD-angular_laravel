@@ -18,7 +18,7 @@ import { TaskaddComponent } from './components/taskadd/taskadd.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
