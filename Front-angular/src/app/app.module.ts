@@ -3,16 +3,16 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddclientComponent } from './components/addclient/addclient.component';
-import { ListclientComponent } from './components/listclient/listclient.component';
 import { HttpClientModule } from "@angular/common/http";
+import { TasklistComponent } from './components/tasklist/tasklist.component';
+import { TaskaddComponent } from './components/taskadd/taskadd.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddclientComponent,
-    ListclientComponent
+    TasklistComponent,
+    TaskaddComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +21,6 @@ import { HttpClientModule } from "@angular/common/http";
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent,    AddclientComponent,
-    ListclientComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

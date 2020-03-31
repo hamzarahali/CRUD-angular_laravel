@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AddclientComponent } from './components/addclient/addclient.component';
-import { ListclientComponent } from './components/listclient/listclient.component';
+import { TasklistComponent } from './components/tasklist/tasklist.component';
+import { TaskaddComponent } from './components/taskadd/taskadd.component';
+
 
 
 const routes: Routes = [
-  { path : '' , component : ListclientComponent },
-  { path : 'addclient' , component : AddclientComponent },
+  { path : '' , component : TasklistComponent },
+  { path : 'addtask' , component : TaskaddComponent },
 ];
 
 @NgModule({
