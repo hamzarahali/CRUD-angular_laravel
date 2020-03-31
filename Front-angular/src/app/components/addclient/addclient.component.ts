@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-addclient',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddclientComponent implements OnInit {
 
-  constructor() { }
+  public clientForm : FormGroup ;
+  public res : any ; 
+
+  constructor(
+    private formBuilder : FormBuilder,
+
+  ) { }
 
   ngOnInit(): void {
+    this.clientForm = this.formBuilder.group({
+      username : ['', Validators.required],
+      password : ['', Validators.required]
+    });
+  }
+
+  onSubmit() {
+    this.res = {
+      'username' : this.clientForm.value.username , 
+      'password' : this.clientForm.value.password
+    }
+    
   }
 
 }

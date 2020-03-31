@@ -5,8 +5,8 @@ import { ListclientComponent } from './components/listclient/listclient.componen
 
 
 const routes: Routes = [
+  { path : '' , component : ListclientComponent },
   { path : 'addclient' , component : AddclientComponent },
-  { path : 'listclient' , component : ListclientComponent },
 ];
 
 @NgModule({
